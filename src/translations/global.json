@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "title": ["Przepisy", "Recipes"],
+    "addRecipe": ["Dodaj przepis", "Add recipe"]
+  },
+  "langFlag": {
+    "pl": ["pl", "pl"],
+    "en": ["en", "en"]
+  },
+  "addRecipe": {
+    "title": ["Dodaj przepis", "Add new recipe"],
+    "submit": ["Dodaj przepis", "Add recipe"],
+    "titleField": ["Tytuł", "title"],
+    "recipeField": ["Przepis", "Recipe"],
+    "chooseFile": ["Wybierz plik...", "Choose a file..."]
+  },
+  "validators": {
+    "required": ["Pole jest wymagane", "Field is required"],
+    "maxTitleValue": ["Maksymalna ilość znaków: 255", "Max 255 characters"],
+    "maxRecipeValue": ["Maksymalnia ilość znaków: 5000", "Max 5000 characters"]
+  }
+}
