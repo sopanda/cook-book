@@ -22,16 +22,19 @@ class App extends Component {
   }
 
   render() {
+    const { activeLanguage } = this.props;
     return (
-      <Fragment>
-        <Layout>
-          <Switch>
-            <Route exact path="/" component={RecipesPage} />
-            <Route exact path="/new" component={NewRecipePage} />
-            <Route exact path="/recipe/:id" component={RecipePage} />
-          </Switch>
-        </Layout>
-      </Fragment>
+      !!activeLanguage && (
+        <Fragment>
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={RecipesPage} />
+              <Route exact path="/new" component={NewRecipePage} />
+              <Route exact path="/recipe/:id" component={RecipePage} />
+            </Switch>
+          </Layout>
+        </Fragment>
+      )
     );
   }
 }

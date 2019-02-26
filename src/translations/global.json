@@ -1,22 +1,20 @@
 {
   "navigation": {
-    "title": ["Przepisy", "Recipes"],
-    "addRecipe": ["Dodaj przepis", "Add recipe"]
+    "title": ["Przepisy na codzień", "Everyday recipes"],
+    "newRecipe": ["Dodaj przepis", "Add recipe"]
   },
-  "langFlag": {
-    "pl": ["pl", "pl"],
-    "en": ["en", "en"]
+  "recipes": {
+    "title": ["Spróbuj dzisiaj", "Try today"]
   },
   "addRecipe": {
-    "title": ["Dodaj przepis", "Add new recipe"],
-    "submit": ["Dodaj przepis", "Add recipe"],
+    "title": ["Dodaj przepis", "New recipe"],
     "titleField": ["Tytuł", "title"],
     "recipeField": ["Przepis", "Recipe"],
-    "chooseFile": ["Wybierz plik...", "Choose a file..."]
+    "submit": ["Dodaj przepis", "New recipe"]
   },
   "validators": {
-    "required": ["Pole jest wymagane", "Field is required"],
     "maxTitleValue": ["Maksymalna ilość znaków: 255", "Max 255 characters"],
-    "maxRecipeValue": ["Maksymalnia ilość znaków: 5000", "Max 5000 characters"]
+    "maxRecipeValue": ["Maksymalnia ilość znaków: 5000", "Max 5000 characters"],
+    "required": ["Pole jest wymagane", "Field is required"]
   }
 }

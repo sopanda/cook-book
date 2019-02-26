@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { recipes } from "./receipes";
+import { recipes } from "./recipes";
 import { localizeReducer } from "react-localize-redux";
 
 const rootReducer = combineReducers({

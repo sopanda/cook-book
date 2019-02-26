@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Spaghetti alla Carbonara",
-    "date": "15:45 29/02/19",
+    "date": "2016-04-20T10:45:43.511Z",
     "imgUrl": "https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/easy_spaghetti_bolognese_93639_16x9.jpg",
     "recipe": "Makaron ugotować w osolonej wodzie, według przepisu na opakowaniu. Odcedzić. Nie przelewać wodą! Boczek pokroić w drobną kostkę. Podsmażyć na patelni z oliwą. Śmietanę, jajka, ser i dość dużą ilość pieprzu zmiksować blenderem. Ugotowany makaron dodać do gorącego boczku, wymieszać i przysmażyć przez ok. 1minuty. Dodać masę jajeczną i mieszać przez chwilę, aż wszystkie składniki dobrze się połączą, a sos lekko zgęstnieje. (Nie mieszać za długo, żeby nie zrobiła się jajecznica!). Wyłożyć na talerze i posypać resztą sera.",
     "likes": 0,
@@ -12,21 +12,40 @@
   {
     "id": 2,
     "title": "Spaghetti bolognese",
-    "date": "01:45 29/05/18",
+    "date": "2012-04-23T18:25:43.511Z",
     "imgUrl": "https://static01.nyt.com/images/2018/08/10/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X.jpg",
     "recipe": "Na głębokiej patelni rozgrzej około 2 łyżki oliwy z oliwek. Na rozgrzaną patelnię wrzuć czosnek i cebulę, a po chwili dodaj mięso, rozdrabniaj je np. widelcem, tak aby nie powstały grube mięsne grudki. Do mięsa dodaj zioła oraz koncentrat. Całość podgrzewaj przez chwilę, dodaj passatę (przecier pomidorowy), gotuj na małym ogniu około 30 minut. Makaron ugotuj al dente, podawaj go z sosem, serem, i bazylią.",
     "likes": 0,
-    "views": 0,
+    "views": 2,
     "lang": "pl"
   },
   {
     "id": 3,
     "title": "Real Spanish omelette",
-    "date": "20:00 10/06/17",
+    "date": "2018-11-03T22:25:53.511Z",
     "imgUrl": "https://supervalu.ie/thumbnail/720x400/var/files/recipes/imported/recipe_spanish-omelette.jpg?fill=1",
     "recipe": "Scrape 500g new potatoes or leave the skins on, if you prefer. Cut them into thick slices. Chop 1 onion. Heat 150ml extra-virgin olive oil in a large frying pan, add the potatoes and onion and stew gently, partially covered, for 30 minutes, stirring occasionally until the potatoes are softened. Strain the potatoes and onion through a colander into a large bowl (set the strained oil aside). Beat 6 eggs separately, then stir into the potatoes with 3 tbsp chopped flat-leaf parsley and plenty of salt and pepper. Heat a little of the strained oil in a smaller pan. Tip everything into the pan and cook on a moderate heat, using a spatula to shape the omelette into a cushion. When almost set, invert on a plate and slide back into the pan and cook a few more minutes. Invert twice more, cooking the omelette briefly each time and pressing the edges to keep the cushion shape. Slide on to a plate and cool for 10 minutes before serving.",
     "likes": 0,
     "views": 0,
     "lang": "en"
+  },
+  {
+    "id": 4,
+    "title": "Creamy Strawberry Crepes",
+    "date": "2015-03-20T19:05:13.511Z",
+    "imgUrl": "https://images.media-allrecipes.com/userphotos/720x405/2359367.jpg",
+    "likes": 3,
+    "views": 0,
+    "lang": "en"
+  },
+  {
+    "id": 5,
+    "title": "Łosoś pieczony w syropie klonowym",
+    "date": "2019-11-04T18:10:43.511Z",
+    "imgUrl": "https://karmelowy.pl/wp-content/uploads/2013/08/sr3.jpg",
+    "recipe": "Odkroić skórkę z filetów, podzielić na mniejsze porcje, opłukać, włożyć do naczynia żaroodpornego i dodać wszystkie składniki oprócz kaszy gryczanej. Wymieszać i zostawić na minimum godzinę, ale lepiej na dłużej. W międzyczasie 1 - 2 razy przewrócić rybę. W międzyczasie ugotować kaszę gryczaną (można gotować nieco dłużej niż przewiduje instrukcja, aż kasza będzie napęczniała w woreczku i dość miękka). Piekarnik nagrzać do 200 stopni C. Wstawić naczynie z łososiem do piekarnika i piec przez ok. 17 minut. Do naczynia z łososiem włożyć ugotowaną kaszę. Można posypać natką lub bazylią. Podawać np. z surówką z kiszonej kapusty.",
+    "likes": 3,
+    "views": 0,
+    "lang": "pl"
   }
 ]
