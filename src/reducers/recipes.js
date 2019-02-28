@@ -57,7 +57,8 @@ export function recipes(state = initialState, action) {
             id: nextRecipeId++,
             likes: 0,
             views: 0,
-            lang: action.code
+            lang: action.code,
+            date: new Date()
           }
         ]
       };

@@ -11,7 +11,8 @@
     "titleField": ["Tytuł", "Title"],
     "description": ["Przepis", "Recipe"],
     "submit": ["Dodaj przepis", "New recipe"],
-    "success": ["Nowy przepis został dodany", "New recipe was created"]
+    "success": ["Nowy przepis został dodany", "New recipe was created"],
+    "photo": ["Zdjęcie", "Photo"]
   },
   "validations": {
     "maxTitleValue": ["Maksymalna ilość znaków: 255", "Max 255 characters"],
@@ -26,5 +27,8 @@
       "Jesteś pewien, że chcesz usunąć przepis",
       "Are you sure that you want to delete recipe of"
     ]
+  },
+  "imageUpload": {
+    "choose": ["Wybierz plik", "Choose a file"]
   }
 }

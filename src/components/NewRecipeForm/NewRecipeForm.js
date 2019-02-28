@@ -2,6 +2,7 @@ import React from "react";
 import { Field } from "redux-form";
 import { Translate } from "react-localize-redux";
 import { RenderField } from "../RenderField";
+import { ImageField } from "../ImageField";
 import PropTypes from "prop-types";
 import { required, maxLength255, maxLength5000 } from "../../helpers";
 import classnames from "classnames";
@@ -18,6 +19,15 @@ const NewRecipeForm = ({ handleSubmit, submitting }) => {
           label={<Translate id="newRecipe.titleField" />}
           validate={[required, maxLength255]}
         />
+      </div>
+      <div className="control">
+        <div className="field">
+          <Field
+            name="photo"
+            component={ImageField}
+            label={<Translate id="newRecipe.photo" />}
+          />
+        </div>
       </div>
       <div className="control">
         <Field

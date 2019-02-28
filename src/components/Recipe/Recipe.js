@@ -101,7 +101,7 @@ Recipe.propTypes = {
     recipe: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
-    date: PropTypes.string.isRequired,
+    date: PropTypes.any.isRequired,
     photo: PropTypes.string
   }),
   isRecipePage: PropTypes.bool.isRequired,

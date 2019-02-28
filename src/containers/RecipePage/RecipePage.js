@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import Recipe from "../../components/Recipe";
+import PropTypes from "prop-types";
 import { fetchRecipeById, like, view } from "../../actions/recipes";
 import classes from "./RecipePage.module.css";
 
@@ -46,6 +47,17 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+RecipePage.propTypes = {
+  recipe: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    recipe: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    date: PropTypes.any.isRequired,
+    photo: PropTypes.string
+  })
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps

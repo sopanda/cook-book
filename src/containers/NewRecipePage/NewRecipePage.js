@@ -12,7 +12,10 @@ import { history } from "../../helpers";
 class NewRecipePage extends Component {
   submit = recipe => {
     const { onNewRecipe, activeLanguage } = this.props;
-    onNewRecipe(recipe, activeLanguage.code);
+    const { photo } = recipe;
+    const localImageUrl = window.URL.createObjectURL(photo);
+    let newRecipe = { ...recipe, imgUrl: localImageUrl };
+    onNewRecipe(newRecipe, activeLanguage.code);
     history.push("/");
   };
 
