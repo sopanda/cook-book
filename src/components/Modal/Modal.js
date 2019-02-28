@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { Translate } from "react-localize-redux";
+import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import classnames from "classnames";
 import classes from "./Modal.module.css";
@@ -51,5 +52,13 @@ class Modal extends PureComponent {
     }
   }
 }
+
+Modal.propTypes = {
+  children: PropTypes.element.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  modalState: PropTypes.bool.isRequired,
+  title: PropTypes.object.isRequired,
+  deleteRecipe: PropTypes.func.isRequired
+};
 
 export default Modal;

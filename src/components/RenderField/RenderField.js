@@ -1,6 +1,7 @@
 import React from "react";
 import { Translate } from "react-localize-redux";
 import classnames from "classnames";
+import PropTypes from "prop-types";
 
 export const RenderField = ({
   label,
@@ -35,3 +36,9 @@ export const RenderField = ({
     )}
   </div>
 );
+
+RenderField.propTypes = {
+  label: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired,
+  input: PropTypes.object.isRequired
+};

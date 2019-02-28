@@ -64,7 +64,12 @@ class Navigation extends Component {
             >
               <div className="navbar-end">
                 <div className="navbar-item">
-                  <Link to="/new" className="is-danger button">
+                  <Link
+                    to="/new"
+                    className="is-danger button"
+                    style={{ width: "100%" }}
+                    onClick={isBurgerActive ? this.toggle : null}
+                  >
                     <Translate id="navigation.newRecipe" />
                   </Link>
                 </div>

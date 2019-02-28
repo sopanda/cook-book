@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
 import { Recipes } from "../../components/Recipes";
+import PropTypes from "prop-types";
 import { fetchRecipes, deleteRecipe } from "../../actions/recipes";
 import { withLocalize } from "react-localize-redux";
 import { connect } from "react-redux";
@@ -45,6 +46,13 @@ const mapDispatchToProps = dispatch => {
     onFetchRecipes: code => dispatch(fetchRecipes(code)),
     onDeleteRecipe: (id, code) => dispatch(deleteRecipe(id, code))
   };
+};
+
+RecipesPage.propTypes = {
+  activeLanguage: PropTypes.object.isRequired,
+  onFetchRecipes: PropTypes.func.isRequired,
+  onDeleteRecipe: PropTypes.func.isRequired,
+  recipes: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default withLocalize(

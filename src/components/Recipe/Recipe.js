@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import NoImage from "../../assets/NoImage.png";
 import Moment from "react-moment";
 import Modal from "../Modal/Modal";
@@ -8,9 +9,8 @@ import classnames from "classnames";
 import { useOpen } from "../../hooks";
 import { Translate } from "react-localize-redux";
 
-const Recipe = props => {
+const Recipe = ({ recipe, isRecipePage, onDelete, onLike }) => {
   const { isOpen, toggle } = useOpen();
-  const { recipe, isRecipePage, onDelete, onLike } = props;
 
   let icon = isRecipePage ? (
     <a
@@ -84,12 +84,29 @@ const Recipe = props => {
           deleteRecipe={() => onDelete(recipe.id)}
           title={<Translate id="deleteRecipe.modalTitle" />}
         >
-          <Translate id="deleteRecipe.question" />{" "}
-          <span className="has-text-danger">{`${recipe.title} ?`}</span>
+          <Fragment>
+            <Translate id="deleteRecipe.question" />
+            <span className="has-text-danger">{` ${recipe.title} ?`}</span>
+          </Fragment>
         </Modal>
       ) : null}
     </div>
   );
+};
+
+Recipe.propTypes = {
+  recipe: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    recipe: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    date: PropTypes.string.isRequired,
+    photo: PropTypes.string
+  }),
+  isRecipePage: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func,
+  onLike: PropTypes.func
 };
 
 export default Recipe;

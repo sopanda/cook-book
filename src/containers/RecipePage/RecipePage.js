@@ -20,7 +20,7 @@ class RecipePage extends PureComponent {
   render() {
     const { recipe, onLike } = this.props;
 
-    return recipe ? (
+    return recipe && Object.entries(recipe).length !== 0 ? (
       <div className={classes.Wrapper}>
         <div className="columns is-desktop">
           <div className="column">

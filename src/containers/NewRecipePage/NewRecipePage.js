@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NewRecipeForm from "../../components/NewRecipeForm";
 import { Translate } from "react-localize-redux";
 import classes from "./NewRecipePage.module.css";
+import PropTypes from "prop-types";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import { withLocalize } from "react-localize-redux";
@@ -33,6 +34,11 @@ const mapDispatchToProps = dispatch => {
   return {
     onNewRecipe: (recipe, code) => dispatch(newRecipe(recipe, code))
   };
+};
+
+NewRecipePage.propTypes = {
+  onNewRecipe: PropTypes.func.isRequired,
+  activeLanguage: PropTypes.object.isRequired
 };
 
 export default withLocalize(

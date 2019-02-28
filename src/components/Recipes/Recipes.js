@@ -1,5 +1,6 @@
 import React, { memo, Fragment } from "react";
 import Recipe from "../Recipe";
+import PropTypes from "prop-types";
 import { Translate } from "react-localize-redux";
 import classnames from "classnames";
 import classes from "./Recipes.module.css";
@@ -14,7 +15,7 @@ export const Recipes = memo(({ recipes, deleteRecipe }) => {
         {recipes.map(recipe => (
           <div
             key={recipe.id}
-            className="column is-one-third-desktop is-half-tablet is-full-mobile"
+            className="column is-one-third-desktop is-full-mobile is-half-tablet"
           >
             <Recipe
               recipe={recipe}
@@ -27,3 +28,8 @@ export const Recipes = memo(({ recipes, deleteRecipe }) => {
     </Fragment>
   );
 });
+
+Recipes.propTypes = {
+  recipes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  deleteRecipe: PropTypes.func.isRequired
+};

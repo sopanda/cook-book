@@ -2,6 +2,7 @@ import React from "react";
 import { Field } from "redux-form";
 import { Translate } from "react-localize-redux";
 import { RenderField } from "../RenderField";
+import PropTypes from "prop-types";
 import { required, maxLength255, maxLength5000 } from "../../helpers";
 import classnames from "classnames";
 import classes from "./NewRecipeForm.module.css";
@@ -41,6 +42,11 @@ const NewRecipeForm = ({ handleSubmit, submitting }) => {
       </div>
     </form>
   );
+};
+
+NewRecipeForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  submitting: PropTypes.bool.isRequired
 };
 
 export default NewRecipeForm;
