@@ -13,10 +13,15 @@ class NewRecipePage extends Component {
   submit = recipe => {
     const { onNewRecipe, activeLanguage } = this.props;
     const { photo } = recipe;
-    const localImageUrl = window.URL.createObjectURL(photo);
-    let newRecipe = { ...recipe, imgUrl: localImageUrl };
-    onNewRecipe(newRecipe, activeLanguage.code);
-    history.push("/");
+    if (photo) {
+      const localImageUrl = window.URL.createObjectURL(photo);
+      let newRecipe = { ...recipe, imgUrl: localImageUrl };
+      onNewRecipe(newRecipe, activeLanguage.code);
+      history.push("/");
+    } else {
+      onNewRecipe(recipe, activeLanguage.code);
+      history.push("/");
+    }
   };
 
   render() {

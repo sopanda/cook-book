@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from "react";
-import { Recipes } from "../../components/Recipes";
+import Recipes from "../../components/Recipes";
 import PropTypes from "prop-types";
 import { fetchRecipes, deleteRecipe } from "../../actions/recipes";
 import { withLocalize } from "react-localize-redux";
@@ -27,10 +27,12 @@ class RecipesPage extends PureComponent {
   render() {
     const { recipes } = this.props;
     return (
-      <Fragment>
-        <Recipes recipes={recipes} deleteRecipe={this.handleDeleteRecipe} />
-        <ToastContainer />
-      </Fragment>
+      recipes && (
+        <Fragment>
+          <Recipes recipes={recipes} deleteRecipe={this.handleDeleteRecipe} />
+          <ToastContainer />
+        </Fragment>
+      )
     );
   }
 }

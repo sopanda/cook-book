@@ -49,12 +49,12 @@ const mapDispatchToProps = dispatch => {
 
 RecipePage.propTypes = {
   recipe: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    recipe: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    date: PropTypes.any.isRequired,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    recipe: PropTypes.string,
+    likes: PropTypes.number,
+    views: PropTypes.number,
+    date: PropTypes.any,
     photo: PropTypes.string
   })
 };

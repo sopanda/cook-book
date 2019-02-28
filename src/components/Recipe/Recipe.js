@@ -102,7 +102,7 @@ Recipe.propTypes = {
     likes: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     date: PropTypes.any.isRequired,
-    photo: PropTypes.string
+    photo: PropTypes.any
   }),
   isRecipePage: PropTypes.bool.isRequired,
   onDelete: PropTypes.func,
