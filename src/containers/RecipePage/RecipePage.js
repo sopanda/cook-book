@@ -1,8 +1,7 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { Recipe } from "../../components/Recipe";
+import Recipe from "../../components/Recipe";
 import { fetchRecipeById, like, view } from "../../actions/recipes";
-import classnames from "classnames";
 import classes from "./RecipePage.module.css";
 
 class RecipePage extends PureComponent {
@@ -22,7 +21,7 @@ class RecipePage extends PureComponent {
     const { recipe, onLike } = this.props;
 
     return recipe ? (
-      <div className={classnames("container", classes.Wrapper)}>
+      <div className={classes.Wrapper}>
         <div className="columns is-desktop">
           <div className="column">
             <Recipe recipe={recipe} isRecipePage={true} onLike={onLike} />

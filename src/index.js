@@ -2,17 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { LocalizeProvider } from "react-localize-redux";
-import { store } from "./helpers/store";
+import { store, history } from "./helpers";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
 ReactDOM.render(
   <Provider store={store}>
     <LocalizeProvider store={store}>
-      <BrowserRouter>
+      <Router history={history}>
         <App />
-      </BrowserRouter>
+      </Router>
     </LocalizeProvider>
   </Provider>,
   document.getElementById("root")

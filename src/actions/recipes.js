@@ -1,3 +1,5 @@
+import { notify } from "../helpers";
+
 export function fetchRecipes(code) {
   return {
     type: "FETCH_RECIPES",
@@ -50,6 +52,21 @@ export function view(id) {
     return {
       type: "ADD_VIEW",
       payload: id
+    };
+  }
+}
+
+export function newRecipe(recipe, code) {
+  return dispatch => {
+    dispatch(addRecipe(recipe, code));
+    setTimeout(() => notify(), 100);
+  };
+
+  function addRecipe(recipe, code) {
+    return {
+      type: "NEW_RECIPE",
+      recipe: recipe,
+      code: code
     };
   }
 }

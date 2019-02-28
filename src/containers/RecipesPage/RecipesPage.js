@@ -1,8 +1,9 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent, Fragment } from "react";
 import { Recipes } from "../../components/Recipes";
 import { fetchRecipes, deleteRecipe } from "../../actions/recipes";
 import { withLocalize } from "react-localize-redux";
 import { connect } from "react-redux";
+import { ToastContainer } from "react-toastify";
 
 class RecipesPage extends PureComponent {
   componentDidMount() {
@@ -24,7 +25,12 @@ class RecipesPage extends PureComponent {
 
   render() {
     const { recipes } = this.props;
-    return <Recipes recipes={recipes} deleteRecipe={this.handleDeleteRecipe} />;
+    return (
+      <Fragment>
+        <Recipes recipes={recipes} deleteRecipe={this.handleDeleteRecipe} />
+        <ToastContainer />
+      </Fragment>
+    );
   }
 }
 

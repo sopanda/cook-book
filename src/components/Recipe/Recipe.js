@@ -1,11 +1,17 @@
-import React, { memo } from "react";
+import React from "react";
 import NoImage from "../../assets/NoImage.png";
 import Moment from "react-moment";
+import Modal from "../Modal/Modal";
 import { Link } from "react-router-dom";
 import classes from "./Recipe.module.css";
 import classnames from "classnames";
+import { useOpen } from "../../hooks";
+import { Translate } from "react-localize-redux";
 
-export const Recipe = memo(({ recipe, isRecipePage, onDelete, onLike }) => {
+const Recipe = props => {
+  const { isOpen, toggle } = useOpen();
+  const { recipe, isRecipePage, onDelete, onLike } = props;
+
   let icon = isRecipePage ? (
     <a
       className={classnames(
@@ -25,7 +31,7 @@ export const Recipe = memo(({ recipe, isRecipePage, onDelete, onLike }) => {
         "card-footer-item column has-text-centered",
         classes.Trash
       )}
-      onClick={() => onDelete(recipe.id)}
+      onClick={() => toggle()}
       href="#!"
     >
       <span className="icon is-small has-text-danger">
@@ -35,7 +41,11 @@ export const Recipe = memo(({ recipe, isRecipePage, onDelete, onLike }) => {
   );
   return (
     <div className="card">
-      <Link to={`/recipe/${recipe.id}`} className="card-image">
+      <Link
+        to={`/recipe/${recipe.id}`}
+        className="card-image"
+        style={isRecipePage ? { pointerEvents: "none" } : null}
+      >
         <figure className="image is-4by3">
           <img src={recipe.imgUrl || NoImage} alt="Recipe" />
         </figure>
@@ -46,21 +56,11 @@ export const Recipe = memo(({ recipe, isRecipePage, onDelete, onLike }) => {
             {recipe.title}
           </p>
           <div className="subtitle">
-            <span
-              className={classnames(
-                "icon is-small has-text-danger",
-                classes.Views
-              )}
-            >
+            <span className={classnames("icon has-text-danger", classes.Views)}>
               <i className="fas fa-eye" aria-hidden="true" />
               <span>{recipe.views}</span>
             </span>
-            <span
-              className={classnames(
-                "icon is-small has-text-danger",
-                classes.Likes
-              )}
-            >
+            <span className={classnames("icon has-text-danger", classes.Likes)}>
               <i className="fas fa-heart" aria-hidden="true" />
               <span>{recipe.likes}</span>
             </span>
@@ -77,6 +77,19 @@ export const Recipe = memo(({ recipe, isRecipePage, onDelete, onLike }) => {
           </footer>
         </div>
       </div>
+      {!isRecipePage && isOpen ? (
+        <Modal
+          closeModal={toggle}
+          modalState={isOpen}
+          deleteRecipe={() => onDelete(recipe.id)}
+          title={<Translate id="deleteRecipe.modalTitle" />}
+        >
+          <Translate id="deleteRecipe.question" />{" "}
+          <span className="has-text-danger">{`${recipe.title} ?`}</span>
+        </Modal>
+      ) : null}
     </div>
   );
-});
+};
+
+export default Recipe;

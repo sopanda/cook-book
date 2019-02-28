@@ -6,15 +6,25 @@
   "recipes": {
     "title": ["Spróbuj dzisiaj", "Try today"]
   },
-  "addRecipe": {
-    "title": ["Dodaj przepis", "New recipe"],
-    "titleField": ["Tytuł", "title"],
-    "recipeField": ["Przepis", "Recipe"],
-    "submit": ["Dodaj przepis", "New recipe"]
+  "newRecipe": {
+    "title": ["Dodaj przepis pysznego dania", "Add a delicious recipe"],
+    "titleField": ["Tytuł", "Title"],
+    "description": ["Przepis", "Recipe"],
+    "submit": ["Dodaj przepis", "New recipe"],
+    "success": ["Nowy przepis został dodany", "New recipe was created"]
   },
-  "validators": {
+  "validations": {
     "maxTitleValue": ["Maksymalna ilość znaków: 255", "Max 255 characters"],
-    "maxRecipeValue": ["Maksymalnia ilość znaków: 5000", "Max 5000 characters"],
+    "maxRecipeValue": ["Maksymalna ilość znaków: 5000", "Max 5000 characters"],
     "required": ["Pole jest wymagane", "Field is required"]
+  },
+  "deleteRecipe": {
+    "cancel": ["Anuluj", "Cancel"],
+    "delete": ["Usuń", "Delete"],
+    "modalTitle": ["Usuń przepis", "Delete recipe"],
+    "question": [
+      "Jesteś pewien, że chcesz usunąć przepis",
+      "Are you sure that you want to delete recipe of"
+    ]
   }
 }

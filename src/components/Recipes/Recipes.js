@@ -1,12 +1,12 @@
-import React, { memo } from "react";
-import { Recipe } from "../Recipe";
+import React, { memo, Fragment } from "react";
+import Recipe from "../Recipe";
 import { Translate } from "react-localize-redux";
 import classnames from "classnames";
 import classes from "./Recipes.module.css";
 
 export const Recipes = memo(({ recipes, deleteRecipe }) => {
   return (
-    <div className="container">
+    <Fragment>
       <h1 className={classnames("title", classes.Title)}>
         <Translate id="recipes.title" />
       </h1>
@@ -24,6 +24,6 @@ export const Recipes = memo(({ recipes, deleteRecipe }) => {
           </div>
         ))}
       </div>
-    </div>
+    </Fragment>
   );
 });

@@ -6,6 +6,8 @@ const initialState = {
   recipe: {}
 };
 
+let nextRecipeId = 6;
+
 export function recipes(state = initialState, action) {
   switch (action.type) {
     case "FETCH_RECIPES":
@@ -44,6 +46,20 @@ export function recipes(state = initialState, action) {
             ? Object.assign({}, recipe, { views: recipe.views + 1 })
             : recipe;
         })
+      };
+    case "NEW_RECIPE":
+      return {
+        ...state,
+        recipes: [
+          ...state.recipes,
+          {
+            ...action.recipe,
+            id: nextRecipeId++,
+            likes: 0,
+            views: 0,
+            lang: action.code
+          }
+        ]
       };
     default:
       return state;
