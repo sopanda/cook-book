@@ -1,4 +1,12 @@
 import data from "../helpers/data.json";
+import {
+  NEW_RECIPE,
+  FETCH_RECIPES,
+  DELETE_RECIPE,
+  FETCH_RECIPE_BY_ID,
+  ADD_LIKE,
+  ADD_VIEW
+} from "../constants";
 
 const initialState = {
   recipes: [...data],
@@ -10,26 +18,26 @@ let nextRecipeId = 6;
 
 export function recipes(state = initialState, action) {
   switch (action.type) {
-    case "FETCH_RECIPES":
+    case FETCH_RECIPES:
       return {
         ...state,
         actualRecipes: state.recipes.filter(
           recipe => recipe.lang === action.payload
         )
       };
-    case "DELETE_RECIPE":
+    case DELETE_RECIPE:
       return {
         ...state,
         recipes: state.recipes.filter(recipe => recipe.id !== action.payload)
       };
-    case "FETCH_RECIPE_BY_ID":
+    case FETCH_RECIPE_BY_ID:
       return {
         ...state,
         recipe: state.recipes.find(obj => {
           return obj.id === Number(action.payload);
         })
       };
-    case "ADD_LIKE":
+    case ADD_LIKE:
       return {
         ...state,
         recipes: state.recipes.map(recipe => {
@@ -38,7 +46,7 @@ export function recipes(state = initialState, action) {
             : recipe;
         })
       };
-    case "ADD_VIEW":
+    case ADD_VIEW:
       return {
         ...state,
         recipes: state.recipes.map(recipe => {
@@ -47,7 +55,7 @@ export function recipes(state = initialState, action) {
             : recipe;
         })
       };
-    case "NEW_RECIPE":
+    case NEW_RECIPE:
       return {
         ...state,
         recipes: [

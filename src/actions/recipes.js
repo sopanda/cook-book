@@ -1,8 +1,16 @@
 import { notify } from "../helpers";
+import {
+  NEW_RECIPE,
+  FETCH_RECIPES,
+  DELETE_RECIPE,
+  FETCH_RECIPE_BY_ID,
+  ADD_LIKE,
+  ADD_VIEW
+} from "../constants";
 
 export function fetchRecipes(code) {
   return {
-    type: "FETCH_RECIPES",
+    type: FETCH_RECIPES,
     payload: code
   };
 }
@@ -15,7 +23,7 @@ export function deleteRecipe(id, code) {
 
   function onDelete(id) {
     return {
-      type: "DELETE_RECIPE",
+      type: DELETE_RECIPE,
       payload: id
     };
   }
@@ -23,7 +31,7 @@ export function deleteRecipe(id, code) {
 
 export function fetchRecipeById(id) {
   return {
-    type: "FETCH_RECIPE_BY_ID",
+    type: FETCH_RECIPE_BY_ID,
     payload: id
   };
 }
@@ -36,7 +44,7 @@ export function like(id) {
 
   function likeRecipe(id) {
     return {
-      type: "ADD_LIKE",
+      type: ADD_LIKE,
       payload: id
     };
   }
@@ -50,7 +58,7 @@ export function view(id) {
 
   function viewRecipe(id) {
     return {
-      type: "ADD_VIEW",
+      type: ADD_VIEW,
       payload: id
     };
   }
@@ -64,7 +72,7 @@ export function newRecipe(recipe, code) {
 
   function addRecipe(recipe, code) {
     return {
-      type: "NEW_RECIPE",
+      type: NEW_RECIPE,
       recipe: recipe,
       code: code
     };
