@@ -55,7 +55,7 @@ RecipePage.propTypes = {
     likes: PropTypes.number,
     views: PropTypes.number,
     date: PropTypes.any,
-    photo: PropTypes.string
+    photo: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
   })
 };
 export default connect(
