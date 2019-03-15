@@ -1,0 +1,7 @@
+.Footer {
+  justify-content: flex-end;
+}
+
+.Card {
+  max-width: 500px;
+}

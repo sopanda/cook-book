@@ -1,0 +1,11 @@
+.Title {
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.PagPage {
+  cursor: pointer;
+}
